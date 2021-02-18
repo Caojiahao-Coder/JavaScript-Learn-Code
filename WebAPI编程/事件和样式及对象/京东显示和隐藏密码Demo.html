@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+        }
+
+        .box img {
+            width: 24px;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            float: right;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <label for="">
+            <img src="img/close.png" alt="" id="eye">
+        </label>
+        <input type="password" id="pwd">
+    </div>
+
+
+    <script>
+        var isVis = true;
+        var eye = document.getElementById("eye");
+        var pwd = document.getElementById("pwd");
+
+        eye.onclick = function () {
+            if (isVis) {
+                pwd.type = 'text';
+                eye.src = 'img/open.png';
+            }
+            else {
+                pwd.type = 'password';
+                eye.src = 'img/close.png';
+            }
+
+            isVis = !isVis;
+        }
+    </script>
+
+</body>
+
+</html>
