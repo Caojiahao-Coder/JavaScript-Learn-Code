@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead tr {
+            height: 30px;
+            background-color: pink;
+        }
+
+        tbody tr {
+            height: 30px;
+        }
+
+        tbody td {
+            border-bottom: 1px solid #d7d7d7;
+            font-size: 12px;
+            color: blue;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="j_cbAll"></th>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>联系方式</th>
+                <th>是否禁用</th>
+            </tr>
+        </thead>
+
+        <tbody id="j_tb">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Great Coder</td>
+                <td>Male</td>
+                <td>15370163082</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        //1.全选和取消全选的做法：让下面所有复选框的checked属性（选中状态）跟随 全选按钮即可
+        //获取元素
+        var j_cbAll = document.getElementById('j_cbAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        //注册事件
+        j_cbAll.onclick = function () {
+            for (var i = 0; i < j_tbs.length; i++) {
+                j_tbs[i].checked = this.checked;
+            }
+        }
+
+        //2.下面复选框需要全部选中，上面全选才能选中做法：给下面所有选中复选框绑定点击事件，每次点击，都要循环绑定事件
+        for (var i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].onclick = function () {
+                var isCheck = true;
+
+                for (var j = 0; j < j_tbs.length; j++) {
+                    if (!j_tbs[j].checked) {
+                        isCheck = false;
+                    }
+                }
+
+                if (!isCheck) {
+                    j_cbAll.checked = false;
+                }
+                else {
+                    j_cbAll.checked = true;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
