@@ -6,6 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .tab {
+            width: 979px;
+            margin: 100px auto;
+        }
+
+        .tab_list {
+            height: 39px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab_list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tab_list .current {
+            background-color: red;
+            color: #fff;
+        }
+
+        .item_info {
+            padding: 20px 0 0 20px;
+        }
+
+        .item {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,6 +86,36 @@
             </div>
         </div>
     </div>
+
+    <script>
+        //1. 上的模块选项卡，点击某一个，当然这一个底色会是红色，其余的不变（排他思想）修改类名的方法
+        //显示获取全部的li元素
+        var tab_list = document.querySelector('.tab_list').querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
+
+        for (var i = 0; i < tab_list.length; i++) {
+            //开始给五个小li设置索引号
+            tab_list[i].setAttribute('index', i);
+
+            tab_list[i].onclick = function () {
+                for (var j = 0; j < tab_list.length; j++) {
+                    tab_list[j].className = '';
+                }
+                //注意！！这里绑定新的class需要使用class而不是再次获取！！切记否则效果无法实现。
+                this.className = 'current';
+
+                //显示内容模块 我们显示的选项卡和上面的tab栏是一一对应的
+                //核心思路：给上面的tab_list里面的所有的小li添加自定义属性，属性值从0开始
+                var index = this.getAttribute('index');
+                //这里也是使用排他思想进行显示和隐藏操作。
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                items[index].style.display = 'block';
+
+            }
+        }
+    </script>
 </body>
 
 </html>
