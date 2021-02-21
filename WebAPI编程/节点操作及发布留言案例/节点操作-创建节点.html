@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Hello World</li>
+    </ul>
+
+    <script>
+        // document.createElement() 方法创建由tagName指定的HTML元素，因为这些元素原先不存在，是根据我们的需要动态创建出来的。所以我们也称为动态创建元素节点。
+
+        //创建节点元素节点
+        var li = document.createElement('li');
+        var ul = document.querySelector('ul');
+        ul.appendChild(li); //后面追加元素
+        var lili = document.createElement('li');
+        //插入元素
+        ul.insertBefore(lili, ul.children[0]);
+    </script>
+</body>
+
+</html>

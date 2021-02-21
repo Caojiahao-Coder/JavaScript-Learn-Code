@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+    </ol>
+
+    <script>
+        var ol = document.querySelector('ol');
+
+        //获取的实文本节点
+        var first_li = ol.firstChild;
+        var last_li = ol.lastChild;
+
+        console.log(first_li)
+        console.log(last_li)
+
+        //返回第一个和最后一个元素节点
+        var first = ol.firstElementChild;
+        var last = ol.lastElementChild;
+        console.log(first)
+        console.log(last)
+
+        //子节点，firstChild 和 lastChild 包含其他节点，操作不方便，而firstElementChild和lastElementChild又有兼容性问题。那么我们应该如何获取第一个子元素节点和最后一个元素节点呢？
+        //解决方法：
+
+        //实际开发的写法，既没有兼容性问题又可以返回第一个子元素
+        console.log(ol.children[0]);
+        //获取最后一个 数量-1
+        console.log(ol.children[ol.children.length - 1])
+
+
+
+    </script>
+</body>
+
+</html>

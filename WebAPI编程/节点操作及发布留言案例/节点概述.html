@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 节点的优点 -->
+    <div>我是div</div>
+    <span>我是span</span>
+
+    <!-- 举个栗子：
+    如果我们需要获取span和div,我们以前的方法是对于他们一一获取。
+    但是现在就不需要了，我们只需要获取到div就可以了。因为span是div的下一个兄弟。 -->
+
+
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <!-- 如果要获取li，我们不需要单独获取，只需要获取到ul然后获取他们的子节点就可以了。 -->
+
+
+    <div class="box">
+        <span class="erweima">x</span>
+    </div>
+    <!-- 如果点击了x要关闭div我们只需要获取到span然后在获取他的父亲就可以了不需要在进行单独获取。 -->
+</body>
+
+</html>

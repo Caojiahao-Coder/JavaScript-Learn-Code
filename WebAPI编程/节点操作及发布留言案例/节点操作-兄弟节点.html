@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+
+    <script>
+        var div = document.querySelector('div');
+
+        //nextSibling返回当前元素的下一个兄弟节点，找不到则返回null，同样，也是包含所有的节点。
+        console.log(div.nextSibling);
+
+        //previousSibling 返回当前元素的上一个兄弟节点，找不到则返回null.同样也是包含了所有的节点。
+        console.log(div.previousSibling);
+
+
+        //获取下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        //获取上一个兄弟元素节点
+        console.log(div.previousElementSibling);
+
+        // 但是上面的函数都有兼容性问题
+        // 于是我们可以自己封装一个函数
+
+
+        function getNextElementSibling(element) {
+            var el = element;
+            while (el = el.nextSibling) {
+                if (el.nodeType == 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
