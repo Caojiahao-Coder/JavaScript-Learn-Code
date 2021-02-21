@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    table {
+        width: 500px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    table th {
+        height: 40px;
+        background-color: gray;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <table>
+        <thead>
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+    <script>
+        var tbody = document.querySelector('tbody');
+        var datas = [
+            {
+                name: 'Great Coder',
+                subject: 'Java',
+                score: 100
+            }, {
+                name: 'Great Coder',
+                subject: 'Java',
+                score: 200
+            }, {
+                name: 'Great Coder',
+                subject: 'Java',
+                score: 300
+            }, {
+                name: 'Great Coder',
+                subject: 'Java',
+                score: 400
+            }, {
+                name: 'Great Coder',
+                subject: 'Java',
+                score: 500
+            }
+        ];
+
+        datas.forEach(a => {
+            var tr = document.createElement('tr');
+            var tdName = document.createElement('td');
+            var tdSubject = document.createElement('td');
+            var tdScore = document.createElement('td');
+
+            //添加删除按钮
+            var tdDelete = document.createElement("td");
+            tdDelete.innerHTML = "<a href='JavaScript:;'>删除</a>";
+
+            tdName.innerHTML = a.name;
+            tdSubject.innerHTML = a.subject;
+            tdScore.innerHTML = a.score;
+
+            tr.appendChild(tdName);
+            tr.appendChild(tdSubject);
+            tr.appendChild(tdScore);
+            tr.appendChild(tdDelete);
+
+            tbody.appendChild(tr);
+        })
+
+        //开始处理删除操作
+        var as = document.querySelectorAll('a');
+        as.forEach(a => {
+            a.onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        })
+    </script>
+</body>
+
+</html>
