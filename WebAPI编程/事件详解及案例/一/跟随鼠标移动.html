@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+
+
+    <script>
+
+        /**
+         * 案例分析
+         * (1) 鼠标不断的移动，使用鼠标移动事件：mousemove
+         * (2) 在页面中移动，给document注册事件
+         * (3) 图片要移动距离，而且不占位置，我们使用绝对定位即可
+         * (4) 核心原理：每次移动鼠标，我们都会获得新的鼠标坐标，把这个x和y坐标作为图片的top和left值就可以移动图片。
+         **/
+
+        var div = document.querySelector('div');
+        document.addEventListener('mousemove', function (e) {
+
+            console.log(e.pageX);
+            console.log(e.pageY);
+
+            div.style.top = (e.pageY - 50) + 'px';
+            div.style.left = (e.pageX - 50) + 'px';
+        })</script>
+
+
+</body>
+
+</html>

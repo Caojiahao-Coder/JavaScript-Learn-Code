@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.onkeypress = function (e) {
+            console.log(e.keyCode);
+        }
+
+        //我们的keydown和keyup事件不区分字母大小写，a和A得到的都是65
+        //我们的keypress事件区分字母大小写，a和A得到的结果是不一样的。
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Great Coder
+    <script>
+        //禁止鼠标的右键菜单
+        document.addEventListener('contextmenu', function (e) {
+            //阻止默认行为
+            e.preventDefault();
+        })
+
+        //禁止鼠标选中文字操作。
+        document.addEventListener('selectstart', function (e) {
+            //阻止默认行为
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('click', function (e) {
+            console.log(e);
+
+            //获取鼠标在可视区内的坐标 和页面是否拖动没有关系
+            console.log(e.clientX);
+            console.log(e.clientY);
+
+            //获取鼠标在整个页面中的坐标 和页面是否拖动有关系的
+            console.log(e.pageX);
+            console.log(e.pageY);
+        })
+    </script>
+</body>
+
+</html>
