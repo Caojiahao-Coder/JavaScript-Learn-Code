@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JS是单线程
+        // JavaScript语言的一大特点就是单线程，同一个时间只能做一件事情，这是因为JavaScript这门脚本语言诞生的使命所导致的。
+        // JavaScript是为了处理页面中用户的交互，以及操作DOM而诞生的。比如我们对于某个DOM元素进行添加和删除操作，不能同时进行，应该先进行添加，之后再删除。
+
+        //现在的js最新的标准提出了异步的思想现在可以同时执行多个任务。
+        console.log(1);
+
+        //注意回调函数属于异步任务
+        setTimeout(() => {
+            console.log(3);
+        }, 1000);
+
+        console.log(2);
+    </script>
+</body>
+
+</html>
