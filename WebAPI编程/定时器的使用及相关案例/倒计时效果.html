@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 260px;
+            background-color: red;
+            text-align: center;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .box h1 {
+            width: 200px;
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 0;
+        }
+
+        .box h2 {
+            width: 200px;
+            color: rgb(189, 189, 189);
+            position: absolute;
+            top: 65px;
+            font-size: 20px;
+            left: 0;
+        }
+
+        .box p {
+            display: block;
+            width: 200px;
+            position: absolute;
+            top: 150px;
+            left: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+        }
+
+        ul {
+            position: absolute;
+            top: 180px;
+            left: 30px;
+        }
+
+        li .parent {
+            width: 40px;
+            height: 60px;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        li .parent div {
+            width: 100%;
+            height: 29px;
+        }
+
+        li .top {
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        li .bottom {
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        li .parent .num {
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        li span {
+            display: block;
+            width: 10px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <h1>京东秒杀</h1>
+        <h2>FLASH DEALS</h2>
+
+        <p>距离本场结束还有</p>
+
+        <ul>
+            <li>
+                <div class="parent">
+                    <div class="num hour">00</div>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+            </li>
+            <li><span> </span></li>
+            <li>
+                <div class="parent">
+                    <div class="num min">00</div>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+            </li>
+            <li><span> </span></li>
+            <li>
+                <div class="parent">
+                    <div class="num second">00</div>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var total_second = 11111;
+
+        var hour_div = document.querySelector('.hour');
+        var min_div = document.querySelector('.min');
+        var second_div = document.querySelector('.second');
+        setNewData();
+        function setNewData() {
+            var hour = parseInt(total_second / 60 / 60 % 24);
+            hour = hour < 10 ? '0' + hour : hour;
+            var min = parseInt(total_second / 60 % 60);
+            min = min < 10 ? '0' + min : min;
+            var second = parseInt(total_second % 60);
+            second = second < 10 ? '0' + second : second;
+
+            hour_div.innerText = hour;
+            min_div.innerText = min;
+            second_div.innerText = second;
+
+            //如何清除setInterval定时器
+            if (total_second == 0) {
+                //使用clearInterval清除定时器
+                clearInterval(timer01)
+            }
+        }
+
+        var timer01 = setInterval(function () {
+            total_second -= 1;
+            setNewData();
+        }, 1000);
+
+    </script>
+
+
+</body>
+
+</html>

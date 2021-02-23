@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入手机号码">
+    <button>发送短信获取验证码</button>
+
+    <script>
+        var btn = document.querySelector('button');
+
+        btn.addEventListener('click', function () {
+            var total_second = 3;
+            this.disabled = true;
+            this.innerText = '剩余' + total_second + '秒';
+            var timer01 = setInterval(function () {
+                total_second -= 1;
+                btn.innerText = '剩余' + total_second + '秒';
+                if (total_second == 0) {
+                    btn.disabled = false;
+                    clearInterval(timer01);
+                    btn.innerText = '发送短信获取验证码';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
