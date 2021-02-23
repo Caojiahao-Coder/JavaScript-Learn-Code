@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点击我');
+            })
+        }
+
+        //冲突了
+        // window.onload = function () {
+        //     alert('22');
+        // }
+    </script>
+
+
+    <script>
+
+        //窗体加载事件
+        document.addEventListener('DOMContentLoaded', function () {
+            alert(22);
+        });
+
+        //但是需要注意的是DOMContentLoaded事件触发时，仅当DOM加载完成时，不包括样式表，图片，flash等等。
+
+
+    </script>
+    <button>点击</button>
+</body>
+
+</html>
