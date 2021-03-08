@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+        我是内容
+    </div>
+
+
+    <script>
+
+        //scroll 系列
+        var div = document.querySelector('div');
+        //需要注意这里使用 scrollHeight获取到的 高度是不包括 border的 但是是包括 padding的
+        // console.log(div.scrollHeight);
+
+        //offsetHeight 只是获取到了元素高度
+        console.log(div.offsetHeight);
+        //而 scroll却是获取到了内容高度
+        console.log(div.scrollHeight);
+
+
+        //注意这里的 scroll top值 就是被卷起来的 高度
+        //scrollLeft就是被横向卷起来的值
+
+        //scroll滚动事件 当我们滚动条发生变换会触发的事件
+
+
+
+
+    </script>
+
+</body>
+
+</html>

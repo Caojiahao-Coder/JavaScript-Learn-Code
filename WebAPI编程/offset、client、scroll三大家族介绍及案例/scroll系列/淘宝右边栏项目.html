@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div-header {
+            height: 200px;
+            background-color: red;
+            text-align: center;
+        }
+
+        .div-banner {
+            height: 400px;
+            background-color: blue;
+            text-align: center;
+        }
+
+        .div-content {
+            height: 1600px;
+            background-color: orange;
+            text-align: center;
+        }
+
+        .div-footer {
+            height: 200px;
+            background-color: yellow;
+            text-align: center;
+        }
+
+        .right-menu {
+            width: 30px;
+            height: 100px;
+            position: absolute;
+            top: 650px;
+            left: 50%;
+            margin-left: 585px;
+            background-color: pink;
+        }
+
+        .back-top {
+            display: none;
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="right-menu">
+
+        <div class="back-top">
+            Top
+        </div>
+
+
+    </div>
+
+    <div class="div-header box">header</div>
+    <div class=" div-banner box">banner</div>
+    <div class="div-content box">content
+    </div>
+    <div class="div-footer box">footer</div>
+
+
+
+
+
+    <script>
+        var rightMenu = document.querySelector('.right-menu');
+
+        var header = document.querySelector('.div-header');
+        var banner = document.querySelector('.div-banner');
+
+        var main  = document.querySelector('.div-content');
+
+        var mainTop=main.offsetTop;
+
+        var needHeight = header.offsetHeight + banner.offsetHeight;
+
+        var changeHeight = rightMenu.offsetTop;
+
+        var back= document.querySelector('.back-top');
+
+        console.log('--' + needHeight, changeHeight);
+
+
+        document.addEventListener('scroll', function () {
+            var height = window.pageYOffset;
+            //当我们的被卷高度大于 600 时右边栏为固定定位
+            if (height >= needHeight) {
+                rightMenu.style.position = 'fixed';
+                console.log((changeHeight - needHeight) + "px")
+                rightMenu.style.top = changeHeight - needHeight + "px";
+            }
+            //如果不是就改成绝对
+            else {
+                rightMenu.style.position = 'absolute';
+                rightMenu.style.top = changeHeight + "px";
+            }
+
+            if(main.pageYOffset >= mainTop)
+            {
+                back.style.display='none';
+            }
+            else{
+                back.style.display='block';
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
