@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击下面的方块才开始运动</button>
+
+
+    <div></div>
+
+    <script>
+
+        var div = document.querySelector('div');
+
+        var button = document.querySelector('button');
+
+        button.addEventListener('click', function () {
+            animate(div, 600)
+        });
+
+
+
+        function animate(obj, target) {
+            //为什么需要添加这行代码？
+            //因为当我们不断的点击按钮是，这个元素的速度会越来越快，因为开启了太多的定时器。
+
+            //所以我们只需要在每次创建定时器时，清空定时器就可以了。
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer);
+                }
+                obj.style.left = obj.offsetLeft + 1 + 'px';
+            }, 10);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
