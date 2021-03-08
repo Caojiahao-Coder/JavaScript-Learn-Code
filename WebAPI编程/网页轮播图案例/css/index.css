@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?otqt2i');
+    src: url('../fonts/icomoon.eot?otqt2i#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?otqt2i') format('truetype'), url('../fonts/icomoon.woff?otqt2i') format('woff'), url('../fonts/icomoon.svg?otqt2i#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+.focus {
+    display: inline-block;
+    position: relative;
+    margin: 100px 50%;
+    transform: translate(-50%, 0);
+    /* overflow: hidden; */
+}
+
+.focus ul {
+    width: 400%;
+}
+
+.focus ol {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.circle i {
+    font-family: 'icomoon';
+    font-style: normal;
+    color: white;
+    font-size: 14px;
+}
+
+.current {
+    color: red !important;
+}
+
+.arrow-1 {
+    display: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: gray;
+    text-decoration: none;
+    color: white;
+    opacity: .8;
+    font-family: 'icomoon';
+}
+
+.fl1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.fl2 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -15px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
