@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 100px auto;
+            padding: 10px;
+            border: 15px solid red;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 45px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+
+    <script>
+       var father= document.querySelector('.father');
+
+       //可以得到元素的大小 宽度和高度 
+       //需要注意padding值也会记录
+       //border值也会记录
+       console.log(father.offsetWidth);
+       console.log(father.offsetHeight);
+
+       var son  = document.querySelector('.son');
+
+       //返回父亲
+       console.log(son.offsetParent);
+       console.log(son.parentNode);
+
+       //但是上面的两个返回父亲的方法有何不同
+       //offsetParent返回的是带有定位的父亲，否则返回的是body
+       //parentNode返回的是最近一级的父亲， 不管父亲有没有定位都会返回。
+    </script>
+</body>
+
+</html>

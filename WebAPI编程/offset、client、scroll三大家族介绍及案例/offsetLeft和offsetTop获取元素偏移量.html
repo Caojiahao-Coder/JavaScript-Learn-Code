@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 100px auto;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 45px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+
+    <script>
+        //offset之offsetTop和offsetLeft 系列
+        var father = document.querySelector('.father');
+        console.log(father.offsetTop);
+        console.log(father.offsetLeft);
+        //可以得到元素的偏移量 位置 返回的不带单位的数据
+        console.log('=======')
+        //他以带有定位的父亲为准，如果没有父亲或者父亲没有定位，则已body为准
+        var son = document.querySelector('.son');
+        console.log(son.offsetTop);
+        console.log(son.offsetLeft);
+
+    </script>
+
+
+</body>
+
+</html>
