@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?v72x46');
+    src: url('../fonts/icomoon.eot?v72x46#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?v72x46') format('truetype'), url('../fonts/icomoon.woff?v72x46') format('woff'), url('../fonts/icomoon.svg?v72x46#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.focus {
+    position: relative;
+    width: 720px;
+    height: 455px;
+    margin: 100px 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus ol {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    background-color: gray;
+    opacity: .5;
+    border-radius: 8px;
+}
+
+/* banner底部的小圆点 */
+
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.circle li {
+    font-family: 'icomoon';
+    font-style: normal;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 3px 6px;
+    float: left;
+    z-index: 2;
+}
+
+.current {
+    color: red !important;
+}
+
+.arrow-l,
+.arrow-r {
+    font-family: 'icomoon';
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    text-decoration: none;
+    line-height: 25px;
+    background-color: white;
+    color: black;
+    z-index: 100;
+    top: 50%;
+    transform: translate(-50%, 1);
+    text-align: center;
+    opacity: .5;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.arrow-l:hover{
+    color: orangered;
+}
+
+.arrow-r:hover{
+    color: orangered;
+}
+
+.arrow-l
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.arrow-r{
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
