@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main {
+            width: 1000px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .nav {
+            width: 100%;
+            height: 40px;
+            background-color: gainsboro;
+            border: 1px solid gray;
+        }
+
+        .nav li {
+            float: left;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+        }
+
+
+        .selectedItem {
+            background-color: red;
+            color: white;
+        }
+
+        .item {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script src="../../jquery.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="nav">
+            <ul>
+                <li>商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价(50000)</li>
+                <li>手机社区</li>
+            </ul>
+
+            <div class="detail">
+                <div class="item">商品介绍</div>
+                <div class="item">规格与包装</div>
+                <div class="item">售后保障</div>
+                <div class="item">商品评价(50000)</div>
+                <div class="item">手机社区</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".nav ul li").click(function () {
+                $(this).addClass("selectedItem").siblings().removeClass("selectedItem");
+                $(".item").eq($(this).index()).show().siblings().hide();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

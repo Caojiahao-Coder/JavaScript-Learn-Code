@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js">
+
+    </script>
+</head>
+
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // //让当前的元素颜色变成红色
+                // $(this).css("background", "red");
+                // //让他的姐妹们的颜色变成蓝色
+                // $(this).siblings("button").css("background", "blue");
+
+                $(this).css("background", "red").siblings().css("background", "blue");
+            });
+        })
+    </script>
+</body>
+
+</html>
