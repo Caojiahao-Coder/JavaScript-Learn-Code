@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button>
+    <button>Hello</button> 
+    <button>Hello</button>
+    <button>Hello</button>
+
+    <script>
+        $(function () {
+            //给元素绑定事件 - 使用隐式迭代
+            $("button").click(function () {
+                $(this).css("background", "pink");
+                //其实就是获取了不包括自己的button元素
+                $(this).siblings("button").css("background", "");
+            });
+        })
+    </script>
+</body>
+
+</html>

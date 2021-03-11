@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" placeholder="请输入你要存储的数据" class="input-input">
+
+    <input type="submit" value="存储数据" class="input-set-data">
+    <input type="submit" value="获取数据" class="input-get-data">
+    <input type="submit" value="删除数据" class="input-delete-data">
+    <input type="submit" value="清空数据" class="input-clear-data">
+
+
+    <script>
+        var input = document.querySelector('.input-input');
+
+        var set_data = document.querySelector('.input-set-data');
+        var get_data = document.querySelector('.input-get-data');
+        
+        var delete_data= document.querySelector('.input-delete-data');
+        
+        set_data.addEventListener('click', function () {
+            var inputData= input.value;
+            sessionStorage.setItem("Name", inputData);
+        });
+
+        get_data.addEventListener('click',function()
+        {
+            alert(sessionStorage.getItem("Name"));
+        });
+
+        delete_data.addEventListener('click',function()
+        {
+sessionStorage.removeItem("Name");
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

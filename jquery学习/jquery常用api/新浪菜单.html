@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            border: 1px solid orangered;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .nav {
+            margin: 100px 100px;
+        }
+
+        .root_item {
+            float: left;
+        }
+
+        .title {
+            display: block;
+            width: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li class="root_item"><a href="#" class="title">微博</a>
+            <ul style="display: none;">
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+            </ul>
+        </li>
+        <li class="root_item"><a href="#" class="title">微博</a>
+            <ul style="display: none;">
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+            </ul>
+        </li>
+        <li class="root_item"><a href="#" class="title">微博</a>
+            <ul style="display: none;">
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+            </ul>
+        </li>
+        <li class="root_item"><a href="#" class="title">微博</a>
+            <ul style="display: none;">
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+                <li><a href="#" class="title">微博</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+            $(".nav>li").mouseover(function () {
+                $(this).children('ul').show();
+            })
+
+            $(".nav>li").mouseleave(function () {
+                $(this).children('ul').hide();
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
