@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100%;
+            height: 400px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <button>淡入效果</button><button>淡出效果</button><button>淡入淡出效果</button><button>修改透明度</button>
+
+    <div></div>
+
+    <script>
+
+
+        // 渐进方式调整到注定的不透明度
+        // fadeTo([speed],opacity,[easing],[fn])
+
+        //效果参数
+        //（1）opacity 透明度必须写，取值0～1自检
+        //（2）speed：三种预定速度之一的字符串（“slow”，“normal”or“fast”）或表示动画时长的毫秒值 必须写
+        //（3）easing：（Optional）用来指定切换效果，默认是“swing”可用参数“linear”。
+
+
+        $(function () {
+            $("button").eq(0).click(function () {
+                $("div").stop().fadeIn();
+            })
+
+            $("button").eq(1).click(function () {
+                $("div").stop().fadeOut();
+            })
+
+            $("button").eq(2).click(function () {
+                $("div").stop().fadeToggle();
+            })
+
+            $("button").eq(3).click(function () {
+                $("div").stop().fadeTo(1000, 0.5);
+            })
+        });
+
+    </script>
+</body>
+
+</html>

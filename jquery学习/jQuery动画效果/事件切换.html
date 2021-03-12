@@ -80,13 +80,15 @@
 
     <script>
         $(function () {
-            $(".nav>li").mouseover(function () {
-                $(this).children('ul').slideDown();
-            })
+            // $(".nav>li").hover(function () {
+            //    $(this).children("ul").slideDown();
+            // }, function () {
+            //     $(this).children("ul").slideUp();
+            // });
 
-            $(".nav>li").mouseleave(function () {
-                $(this).children('ul').slideUp();
-            })
+            $(".nav li").hover(function () {
+                $(this).children("ul").slideToggle();
+            });
         })
     </script>
 

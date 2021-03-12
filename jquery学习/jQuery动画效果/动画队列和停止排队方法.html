@@ -80,13 +80,16 @@
 
     <script>
         $(function () {
-            $(".nav>li").mouseover(function () {
-                $(this).children('ul').slideDown();
-            })
+            // $(".nav>li").hover(function () {
+            //    $(this).children("ul").slideDown();
+            // }, function () {
+            //     $(this).children("ul").slideUp();
+            // });
 
-            $(".nav>li").mouseleave(function () {
-                $(this).children('ul').slideUp();
-            })
+            $(".nav li").hover(function () {
+                //stop 方法需要写在动画前面
+                $(this).children("ul").stop().slideToggle();
+            });
         })
     </script>
 

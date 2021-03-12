@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .main {
+            width: 615px;
+            text-align: center;
+            padding: 4px;
+            margin: 100px auto;
+            border: 2px solid white;
+        }
+
+        a {
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        li {
+            display: inline-block;
+
+        }
+    </style>
+
+
+    <script src="../../jquery.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <ul>
+            <li><a href="#" style="background: url(images/01.jpg) no-repeat center;"></a></li>
+            <li><a href="#" style="background: url(images/02.jpg) no-repeat center;"></a></li>
+            <li><a href="#" style="background: url(images/03.jpg) no-repeat center;"></a></li>
+            <li><a href="#" style="background: url(images/04.jpg) no-repeat center;"></a></li>
+            <li><a href="#" style="background: url(images/05.jpg) no-repeat center;"></a></li>
+            <li><a href="#" style="background: url(images/06.jpg) no-repeat center;"></a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $("li").hover(function () { $(this).siblings().stop().fadeTo("slow", .3); }, function () {
+                $(this).siblings().stop().fadeTo("slow", 1);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
