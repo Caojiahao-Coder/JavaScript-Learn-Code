@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+
+    <div></div>
+
+    <ul>
+        <li>Hello World</li>
+        <li>Hello World</li>
+        <li>Hello World</li>
+        <li>Hello World</li>
+    </ul>
+
+    <ol></ol>
+
+    <script>
+        $(function () {
+
+
+            // on可以实现事件委托 (委派)
+            $("ul").on("click", "li", function () {
+                console.log($(this));
+            });
+
+
+            //使用 on 可以为 未来穿件的元素绑定事件
+            $("ol").on("click", "li", function () {
+                alert(11)
+            })
+
+            var li = $("<li>我是后来创建的</li>");
+            $("ol").append(li);
+
+        });
+    </script>
+
+
+</body>
+
+</html>

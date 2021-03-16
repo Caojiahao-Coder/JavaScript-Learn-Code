@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="node_modules/fullpage.js/dist/fullpage.min.css">
+
+    <script src="../../jquery.js"></script>
+    <script src="node_modules/fullpage.js/dist/fullpage.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#fullpage").fullpage(
+                {
+                    sectionsColor: ["pink", "skyblue", "red", "green"],
+                    navigation: true
+                }
+            );
+        });
+    </script>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div id="fullpage">
+        <div class="section active">Some sectio1</div>
+        <div class="section">Some section2</div>
+        <div class="section">Some section3</div>
+        <div class="section">Some section4</div>
+    </div>
+
+</body>
+
+</html>

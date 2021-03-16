@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+}
+
+header {
+    height: 50px;
+    background-color: rgb(32, 32, 32);
+}
+
+section {
+    width: 800px;
+    margin: 0 auto;
+}
+
+header section {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+label {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input {
+    width: 400px;
+    height: 23px;
+    padding: 3px 8px;
+    float: right;
+}
+
+li {
+    height: 25px;
+    background-color: white;
+    border-left: 4px solid skyblue;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+li input {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    float: left;
+    left: 10px;
+    top: 5px;
+}
+
+li p {
+    position: absolute;
+    float: left;
+    left: 30px;
+    line-height: 25px;
+}
+
+li a {
+    position: absolute;
+    float: left;
+    right: 10px;
+    line-height: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: orangered;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+#todocount, #donecount {
+    background-color: rgb(214, 240, 245);
+    float: right;
+    padding: 3px;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 24px;
+}
+
+ul li {
+    color: gray;
+    border-color: gray;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .box {
+            width: 600px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .txt {
+            width: 100%;
+        }
+
+        button {
+            position: relative;
+        }
+
+        ul li {
+            display: none;
+        }
+    </style>
+
+
+    <script src="../jquery.js"></script>
+
+    <script>
+
+
+        $(function () {
+            $(".btn").on("click", function () {
+                var li = $("<li></li>");
+                li.html($(".txt").val() + "<a href='javascropt:;'> 删除 </a>");
+                //因为新发布的留言在前面，所有我们需要在前面添加内容
+                $("ul").prepend(li);
+                li.slideDown();
+                $(".txt").val("");
+            });
+
+            $("ul").on("click", "a", function () {
+$(this).parent().remove();
+            });
+        });
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="box" id="weibo">
+        <span>微博发布</span>
+        <textarea name="" id="" cols="30" rows="10" class="txt"></textarea>
+        <button class="btn">发布</button>
+        <ul></ul>
+
+
+        <script>
+            $(function () {
+
+
+
+
+
+
+            });
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        $(function () {
+            // $("div").click(function () {
+            //     console.log($(this).css("backgroundColor"));
+            // });
+
+            // $("div").mouseenter(function () {
+            //     console.log($(this).css("backgroundColor","red"));
+            // });
+
+            //事件处理 on
+            // $("div").on({
+            //     mouseenter: function () {
+            //         $(this).css("backgroundColor", "red");
+            //     },
+            //     click: function () {
+            //         console.log($(this).css("backgroundColor"));
+            //     },
+            //     mouseout:function()
+            //     {
+            //         $(this).css("backgroundColor", "skyblue");
+            //     }
+            // })
+
+            //触发其中任何一个都会触发下面的方法
+            $("div").on("mouseenter mouseleave", function () {
+                alert("11");
+            });
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

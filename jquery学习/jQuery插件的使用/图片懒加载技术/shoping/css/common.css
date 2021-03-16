@@ -1,0 +1,331 @@
+/* 版心 */
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+}
+
+.shortcut-inner {
+    height: 31px;
+}
+
+.fl {
+    float: left;
+}
+
+.fl li {
+    float: left;
+    color: #666666;
+}
+
+.fl span {
+    display: block;
+    font-size: 12px;
+    line-height: 31px;
+}
+
+.fl a {
+    display: block;
+    line-height: 31px;
+    margin-left: 14px;
+}
+
+.fr {
+    float: right;
+}
+
+.fr li {
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.fr a {
+    display: block;
+    line-height: 31px;
+}
+
+.fr .space {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.fr span {
+    line-height: 31px;
+    color: #666666;
+    font-size: 12px;
+}
+
+.fr .pup-down {
+    padding-right: 24px;
+}
+
+.fr i {
+    font-family: "icomoon";
+    font-size: 12px;
+    font-style: normal;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+}
+
+/* 顶部快捷导航栏完成 */
+
+/* 搜索区域开始 */
+
+.search-inner {
+    background-color: white;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.search-inner div {
+    height: 55px;
+    position: relative;
+}
+
+.search-input {
+    width: 454px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 347px;
+    border: 1px solid #b1191a;
+    padding: 10px;
+}
+
+.btn-search {
+    display: block;
+    background-color: #b1191a;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #b1191a;
+    width: 80px;
+    height: 33px;
+    position: absolute;
+    top: 0px;
+    left: 800px;
+}
+
+.search-inner ul {
+    position: absolute;
+    top: 43px;
+    left: 360px;
+}
+
+.search-inner .logo {
+    display: block;
+    width: 219px;
+    height: 55px;
+    background: url("../images/logo.png") no-repeat center;
+    text-indent: -99999px;
+    overflow: hidden;
+}
+
+.search-inner li {
+    display: block;
+    height: 12px;
+    margin-right: 24px;
+    float: left;
+}
+
+.shopping-car {
+    display: block;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    font-family: "icomoon";
+    font-style: normal;
+    color: #666666;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 996px;
+}
+
+.search-inner i {
+    display: block;
+    width: 14px;
+    height: 16px;
+    background-color: #b1191a;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 8px;
+    color: white;
+    font-style: normal;
+    line-height: 16px;
+    text-align: center;
+    position: absolute;
+    top: -4px;
+    left: 1100px;
+}
+
+/* 搜索框完成 */
+
+/* footer开始 */
+
+footer {
+    background-color: #f5f5f5;
+    margin-top: 37px;
+}
+
+.footer-inner {
+    height: 417px;
+    /* background-color: pink; */
+}
+
+.footer-inner .detail {
+    width: 100%;
+    height: 109px;
+    border-bottom: 1px solid #dfdfdf;
+    /* background-color: deepskyblue; */
+}
+
+.footer-inner .detail li {
+    width: 20%;
+    height: 109px;
+    /* background-color: forestgreen; */
+    float: left;
+}
+
+.footer-inner .detail .parent {
+    height: 50px;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 37px;
+    padding-bottom: 30px;
+}
+
+.footer-inner .detail .img {
+    padding: 10px;
+    background-color: #c81623;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.footer-inner .detail img {
+    width: 30px;
+    height: 30px;
+    background-color: #c81623;
+}
+
+.footer-inner .detail .parent-detail {
+    height: 35px;
+    width: 100%;
+    position: absolute;
+    top: 38px;
+    left: 90px;
+}
+
+.footer-inner .detail .parent-detail i {
+    display: block;
+}
+
+.footer-inner .helper {
+    height: 188px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.footer-inner .helper .menu {
+    width: 950px;
+    height: 100%;
+    float: left;
+}
+
+.footer-inner .helper .qr-app {
+    width: 250px;
+    height: 100%;
+    float: left;
+    padding-left: 32px;
+    padding-top: 22px;
+    padding-right: 32px;
+}
+
+.footer-inner .helper .menu-detail {
+    width: 190px;
+    height: 100%;
+    float: left;
+    padding-left: 32px;
+    padding-top: 22px;
+}
+
+.footer-inner a {
+    display: block;
+    height: 21px;
+    line-height: 21px;
+}
+
+.footer-inner h4 {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.qr-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.qr-code {
+    display: block;
+    width: 95px;
+    height: 95px;
+    margin: 0 auto;
+}
+
+.qr-detail {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.footer-inner .description {
+    margin-top: 21px;
+}
+
+.footer-inner .description ul {
+    width: 990px;
+    height: 21px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.footer-inner .description li {
+    float: left;
+}
+
+.footer-inner .description a {
+    font-size: 12px;
+    color: #666666;
+}
+
+.footer-inner .description a:hover {
+    color: #c81623;
+}
+
+.footer-inner .description i {
+    font-style: normal;
+}
+
+.footer-inner .description p {
+    font-style: normal;
+    font-size: 12px;
+    color: #666666;
+    display: block;
+    width: 730px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 14px;
+}
