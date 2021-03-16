@@ -1,0 +1,713 @@
+/* 导航栏开始 */
+
+nav {
+    border-bottom: 2px solid #b1191a;
+}
+
+.nav-inner {
+    height: 45px;
+    background-color: white;
+}
+
+.nav-inner ul {
+    position: relative;
+    top: 0px;
+    left: 219px;
+}
+
+.nav-inner li {
+    float: left;
+    margin-left: 32px;
+    margin-right: 20px;
+}
+
+.nav-inner li a {
+    display: block;
+    line-height: 45px;
+}
+
+/* 导航栏结束 分类和banner开始Î */
+
+.banner-inner {
+    height: 455px;
+    margin-top: 10px;
+}
+
+.good-category {
+    height: 512px;
+    width: 209px;
+    background-color: turquoise;
+    position: relative;
+    top: -57px;
+    left: 0px;
+    float: left;
+}
+
+.good-category .title {
+    display: block;
+    height: 46px;
+    width: 209px;
+    background-color: #b1191a;
+    color: white;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.category-menu {
+    width: 209px;
+    height: 466px;
+    background-color: #c81623;
+}
+
+.category-menu li {
+    height: 31.1px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.category-item {
+    color: white;
+    font-size: 14px;
+    line-height: 31px;
+}
+
+.category-menu i {
+    font-family: "icomoon";
+    font-size: 12px;
+    font-size: 14px;
+    font-style: normal;
+    color: white;
+    float: right;
+    line-height: 31px;
+}
+
+.category-menu li:hover {
+    background-color: white;
+}
+
+.category-menu li:hover .category-item {
+    color: #c81623;
+}
+
+.category-menu li:hover i {
+    color: #c81623;
+}
+
+.banner-item {
+    width: 721px;
+    height: 455px;
+    background-color: blue;
+    float: left;
+    margin-left: 12px;
+    background: url(../images/banner-item.png) no-repeat center;
+}
+
+.banner-right-menu {
+    width: 243px;
+    height: 455px;
+    float: left;
+    margin-left: 15px;
+    /* background-color: pink; */
+}
+
+.banner-right-menu .title {
+    height: 32px;
+    background-color: white;
+    border: 1px solid #e4e4e4;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.banner-right-menu .title {
+    border-bottom: 1px dashed #e4e4e4;
+}
+
+.banner-right-menu .title span {
+    font-size: 14px;
+    line-height: 32px;
+    color: #666666;
+}
+
+.banner-right-menu .title a {
+    font-family: "icomoon";
+    font-size: 14px;
+    line-height: 31px;
+    float: right;
+    color: #666666;
+}
+
+.banner-right-menu .title a:hover {
+    color: #c81623;
+}
+
+.banner-right-menu .news-content {
+    height: 130px;
+    background-color: white;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+}
+
+.banner-right-menu .news-content li {
+    height: 26px;
+    margin-left: 16px;
+}
+
+.banner-right-menu .news-content a {
+    height: 26px;
+    line-height: 26px;
+}
+
+.nine-point-menu {
+    height: 208px;
+    width: 243px;
+    border-top: 1px solid #e4e4e4;
+    /* border-left: 1px solid #e4e4e4; */
+    /* border-bottom: 1px solid #e4e4e4; */
+}
+
+.banner-right-bottom-ad {
+    height: 75px;
+    margin-top: 10px;
+    background: url(../images/banner-right-bottom-ad.png)no-repeat center;
+}
+
+.banner-right-menu .nine-point-menu li {
+    width: 25%;
+    float: left;
+}
+
+.banner-right-menu .nine-point-menu div {
+    height: 70px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.banner-right-menu .nine-point-menu a {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.banner-right-menu .nine-point-menu p {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #666666;
+}
+
+.banner-inner {
+    position: relative;
+}
+
+.out-left-menu {
+    /* display: none;
+    width: 66px;
+    height: 343px;
+    position: absolute;
+    top: 158px;
+    left: -78px; */
+
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -676px;
+    width: 66px;
+    background-color: #fff;
+    display: none;
+}
+
+.out-left-menu li {
+    width: 100%;
+    height: 31px;
+}
+
+.out-left-menu li a {
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    border-top: 1px solid #e4e4e4;
+}
+
+.out-left-menu li a:hover {
+    background-color: #c81623;
+    color: white;
+}
+
+/* 分类和bannar结束 今日推荐开始 */
+
+.today-recommendations-inner {
+    height: 163px;
+    margin-top: 11px;
+    background-color: pink;
+}
+
+.today-recommendations-inner .clock {
+    width: 206px;
+    height: 163px;
+    background-color: #5c5251;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.clock img {
+    display: block;
+    width: 57px;
+    height: 57px;
+    position: relative;
+    top: -16px;
+    left: 70px;
+}
+
+.clock p {
+    font-size: 18sp;
+    color: white;
+    position: relative;
+    left: 65px;
+    top: -10px;
+}
+
+.recommendations-goods {
+    background-color: #ebebeb;
+    height: 100%;
+    width: 994px;
+    position: relative;
+    top: -163px;
+    left: 206px;
+    padding-top: 10px;
+}
+
+.recommendations-goods-inner {
+    display: block;
+    height: 143px;
+    /* background-color: springgreen; */
+    color: black;
+}
+
+.recommendations-goods-inner:hover {
+    color: black;
+}
+
+.good-item {
+    width: 248px;
+    height: 100%;
+    border-right: 1px solid #dddddd;
+    padding: 16px 24px;
+    /* background-color: pink; */
+    float: left;
+    position: relative;
+}
+
+.good-item .title {
+    font-size: 16px;
+}
+
+.good-item .price {
+    display: inline-block;
+    color: white;
+    margin-top: 10px;
+    line-height: 14px;
+    font-size: 14px;
+    padding: 1px;
+}
+
+.good-item .detail {
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+    line-height: 12px;
+}
+
+.good-item .btnSubmit {
+    display: block;
+    width: 57px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 21px;
+}
+
+.good-item img {
+    position: absolute;
+    top: 20px;
+    left: 125px;
+}
+
+.good-item .price01 {
+    background-color: #00a0e8;
+}
+
+.good-item .submit01 {
+    background-color: #00a0e8;
+    display: none;
+}
+
+.good-item .price02 {
+    background-color: #5fb200;
+}
+
+.good-item .submit02 {
+    background-color: #5fb200;
+}
+
+.good-item .price03 {
+    background-color: #e2162f;
+}
+
+.good-item .submit03 {
+    background-color: #e2162f;
+}
+
+.good-item .price04 {
+    background-color: #0085fb;
+}
+
+.good-item .submit04 {
+    background-color: #0085fb;
+}
+
+.good04 {
+    border-right: 0px;
+}
+
+/* 秒杀结束 猜你喜欢开始 */
+
+.you-like-inner {
+    height: 290px;
+    top: 20px;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+
+.you-like-inner .title {
+    height: 38px;
+    position: relative;
+}
+
+.you-like-inner .title p {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 38px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.you-like-inner .title a {
+    display: block;
+    width: 65px;
+    height: 38px;
+    color: #666666;
+    font-family: "icomoon";
+    font-style: normal;
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+    position: absolute;
+    top: 0px;
+    right: 18px;
+}
+
+.you-like-inner .title a:hover {
+    color: #e2162f;
+}
+
+.you-like-inner .main {
+    width: 100%;
+    height: 232px;
+    border: 1px solid #e4e4e4;
+    display: block;
+    float: left;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+}
+
+.you-like-good {
+    width: 199px;
+    height: 100%;
+    float: left;
+}
+
+.you-like-good .good-img {
+    width: 100%;
+    height: 160px;
+}
+
+.you-like-good .good-detail {
+    width: 100%;
+    height: 62px;
+    border-right: 1px solid #ebebeb;
+    padding-top: 3px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.you-like-good .good-detail .good-name {
+    height: 42px;
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    line-height: 21px;
+}
+
+.you-like-good .good-detail .good-price {
+    display: block;
+    font-size: 16px;
+    color: #c81623;
+    line-height: 23px;
+}
+
+/* 猜你喜欢模块结束。 家用电器模块开始 */
+
+.household-appliances-inner {
+    height: 504px;
+    margin-top: 18px;
+    position: relative;
+    background-color: white;
+    padding-top: 20px;
+}
+
+.household-appliances-inner .title {
+    height: 38px;
+    width: 100%;
+    border-bottom: 2px solid #c81623;
+}
+
+.household-appliances-inner .title ul {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+}
+
+.household-appliances-inner li {
+    float: left;
+    line-height: 38px;
+}
+
+.household-appliances-inner a {
+    display: block;
+    line-height: 38px;
+}
+
+.household-appliances-inner i {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    font-size: 12px;
+    font-style: normal;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.household-appliances-inner .main {
+    height: 360px;
+    background-color: yellow;
+    border-bottom: 2px solid #dddddd;
+}
+
+.household-appliances-inner .left-content {
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+.household-appliances-inner .left-content .category {
+    width: 100%;
+    height: 98px;
+    background-color: #f9f9f9;
+}
+
+.household-appliances-inner .left-content li {
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.household-appliances-inner .category-item {
+    display: block;
+    width: 86px;
+    line-height: 30px;
+    float: left;
+    border-bottom: 1px solid #ebebeb;
+    text-align: center;
+    color: #666666;
+}
+
+.household-appliances-inner .category-item:hover {
+    border-bottom: 1px solid #c81623;
+}
+
+.household-appliances-inner .spaces {
+    display: block;
+    width: 12px;
+    height: 12px;
+    float: left;
+}
+
+.household-appliances-inner .phone {
+    padding-top: 25px;
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 262px;
+}
+
+.household-appliances-inner .phone h3 {
+    text-align: center;
+    color: #c81623;
+    font-size: 16px;
+}
+
+.household-appliances-inner .phone h4 {
+    text-align: center;
+    color: #c81623;
+    font-size: 12px;
+}
+
+.household-appliances-inner .phone .img {
+    width: 100%;
+    height: 140px;
+    background: url(../images/中兴手机.png) no-repeat center;
+    margin-top: 21px;
+}
+
+.household-appliances-inner .banner-content {
+    width: 328px;
+    height: 100%;
+    background-color: #c6e8b6;
+    float: left;
+    padding-left: 32px;
+    padding-top: 40px;
+    padding-right: 32px;
+    color: #4c852a;
+}
+
+.household-appliances-inner .banner-content .img-main {
+    width: 100%;
+    height: 175px;
+    background: url(../images/360手机.png) no-repeat center;
+    margin-top: 40px;
+}
+
+.household-appliances-inner .banner-content .img-down {
+    width: 150px;
+    height: 30px;
+    margin: 0px auto;
+    background: url(../images/360手机倒影.png) no-repeat center;
+}
+
+.household-appliances-inner .banner-content .bar {
+    width: 72px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.household-appliances-inner .banner-content .bar li {
+    float: left;
+}
+
+.household-appliances-inner .banner-content .bar span {
+    display: block;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-radius: 8px;
+}
+
+.household-appliances-inner .main-one-content {
+    width: 221px;
+    height: 100%;
+    background-color: steelblue;
+    float: left;
+    border-right: 1px solid #ededed;
+}
+
+.household-appliances-inner .main-one-content .one-top {
+    width: 100%;
+    height: 180px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e4e4;
+    padding-top: 26px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.household-appliances-inner .main-one-content .one-top .img {
+    width: 97px;
+    height: 97px;
+    background: url(../images/moto.png) no-repeat center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.household-appliances-inner .main-one-content .one-bottom {
+    width: 100%;
+    height: 180px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e4e4;
+    padding-top: 26px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.household-appliances-inner .main-one-content .one-bottom .img {
+    width: 97px;
+    height: 97px;
+    background: url(../images/乐max2.png) no-repeat center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.household-appliances-inner .main-one-content h4 {
+    color: #c81623;
+}
+
+.household-appliances-inner .main-two-content {
+    width: 220px;
+    height: 100%;
+    float: left;
+    background-color: #ffffff;
+    border-right: 1px solid #dddddd;
+    padding-top: 72px;
+    padding-left: 26px;
+    padding-right: 26px;
+    text-align: center;
+}
+
+.household-appliances-inner .main-two-content h3 {
+    font-size: 16px;
+}
+
+.household-appliances-inner .main-two-content h4 {
+    font-size: 14px;
+    color: #999999;
+}
+
+.household-appliances-inner .main-two-content .img {
+    height: 150px;
+    background: url(../images/G9青春版.png) no-repeat center;
+    margin-top: 45px;
+}
+
+.household-appliances-inner .bottom-menu {
+    width: 100%;
+    height: 66px;
+    position: relative;
+    margin-top: 20px;
+    background-color: blueviolet;
+    float: left;
+    background: url(../images/图层122.png) no-repeat center;
+}

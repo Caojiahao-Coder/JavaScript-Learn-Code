@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?ql4em9');
+    src: url('../fonts/icomoon.eot?ql4em9#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ql4em9') format('truetype'), url('../fonts/icomoon.woff?ql4em9') format('woff'), url('../fonts/icomoon.svg?ql4em9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #c81623;
+}
+
+li {
+    list-style: none;
+}
+
+.style-normal {
+    color: #666666;
+    font-size: 12px;
+    display: block;
+    height: 12px;
+    line-height: 12px;
+}
+
+.style-normal:hover {
+    color: #c81623;
+}
+
+.style-red {
+    color: #c81623;
+    font-size: 12px;
+    display: block;
+    height: 12px;
+    line-height: 12px;
+}
+
+input, button {
+    outline: 0;
+    border: 0px;
+}

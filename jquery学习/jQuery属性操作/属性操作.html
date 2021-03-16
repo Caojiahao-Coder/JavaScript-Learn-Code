@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+</head>
+
+<body>
+
+    <a href="http://www.blog.greatcoder.com.cn:3001" title="个人博客">嘿嘿</a>
+
+    <input type="checkbox" checked="true">
+
+    <div index=1></div>
+    <script>
+        $(function () {
+            //获取属性值的语法
+            console.log($("a").prop("href"));
+
+            //设置属性值的语法
+            $("a").prop("href", "https://www.baidu.com")
+
+            $("input").change(function () {
+                console.log($(this).prop("checked"));
+            })
+
+            $("div").attr("index", 10);
+
+            $("div").data("uname", "Great Coder");
+
+            console.log($("div").data("uname"));
+
+            //无法获取自定义属性
+            console.log($("div").attr("index"));
+        });
+    </script>
+
+</body>
+
+</html>

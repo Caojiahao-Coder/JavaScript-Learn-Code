@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+    //$.each()方法遍历元素，主要用于遍历数据，处理数据
+    $("div").each(function(index,domEle){
+        //第一个元素就是当前遍历元素的索引
+        console.log(index)
+        //第二个元素为
+        console.log(domEle)
+    })
+
+    var arr = ["red","green","blue"]
+
+    $.each(arr,function(i,ele)
+    {
+        console.log(ele);
+    })
+    
+</script>
+
+
+
+
+
+</body>
+</html>
