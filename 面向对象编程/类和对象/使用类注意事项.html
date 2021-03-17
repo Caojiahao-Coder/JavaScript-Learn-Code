@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        var that;
+        class Star {
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+
+                that = this;
+                this.btn = document.querySelector("button");
+                this.btn.onclick = this.sing;
+            }
+
+            //创建了一个函数
+            sing() {
+                //这个方法里的this关键字指向的是btn,因为button调用了他。
+
+                //这里这样的写法是错误的。因为这里的this指向的是btn
+                // console.log(this.uname);
+
+
+                console.log(that.uname);
+            }
+        }
+
+        var star = new Star("Google", 12);
+
+        //在ES6中没有变量提升，所以我们必须要先定义类，才能通过类实例化对象
+        //类里面有共同的属性和方法，一定要使用this关键字
+
+        //还有一个问题就是类里面this的指向问题
+    </script>
+
+
+</body>
+
+</html>

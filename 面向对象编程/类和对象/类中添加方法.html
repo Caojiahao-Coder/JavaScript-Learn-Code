@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //创建类
+        class Star {
+            //创建一个构造函数
+            //类中的共有属性放到construction里面
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+            }
+
+            sign(name) {
+                console.log(name + "爱唱歌");
+            }
+        }
+
+        //利用类创建对象
+        var greatCoder = new Star("Great Coder", 18);
+        var star01 = new Star("Star 01", 17);
+        alert(greatCoder.uname + "==" + greatCoder.age);
+
+        alert(star01.uname + "==" + star01.age);
+
+        greatCoder.sign("Great Coder");
+
+    </script>
+
+</body>
+
+</html>

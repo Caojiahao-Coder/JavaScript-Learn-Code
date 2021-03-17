@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //创建类
+        class Star {
+            //创建一个构造函数
+            //类中的共有属性放到construction里面
+            constructor(uname, age) {
+                this.uname = uname;
+                this.age = age;
+            }
+        }
+
+        //利用类创建对象
+        var greatCoder = new Star("Great Coder", 18);
+        var star01 = new Star("Star 01", 17);
+        alert(greatCoder.uname + "==" + greatCoder.age);
+
+        alert(star01.uname + "==" + star01.age);
+
+        //通过class 关键字创建类，类名我们还是习惯性的定义首字母大写。
+        //类里面有constructor函数，可以接收传递过来的参数。同时返回实例对象。
+        //constructor 函数只要new生成实例时，就会自动调用这个函数，如果我们不写这个函数，类也会自动生成这个函数
+        //生成实例new不可以省略
+        //最后注意语法规范，创建类 类名后面不要加小括号，生成实例，类名侯后面加小括号，构造函数不需要添加function
+    </script>
+
+</body>
+
+</html>
