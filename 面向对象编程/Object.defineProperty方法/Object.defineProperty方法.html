@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var userData = {
+            id:1,
+            name: "GreatCoder",
+            gender: "Male",
+            age: 18
+        };
+
+        //目标对象
+        //修改的属性名字
+        //目标属性所拥有的特征 （是一个对象的格式）
+        Object.defineProperty(userData, 'Sex', {
+            value: 'Male'
+        });
+
+        Object.defineProperty(userData, 'id', {
+            writable: false //是否可以重写
+        });
+
+        Object.defineProperty(userData, 'id', {
+            writable: false, //是否可以重写
+            enumerable=false//如果值为false，则不允许遍历 默认值为 false
+        });
+
+        Object.defineProperty(userData, 'id', {
+            writable: false, //是否可以重写
+            configurable=false//如果值为false，则不允许被删除
+        });
+
+        console.log(userData);
+
+        userData.id=2;
+        console.log(userData);
+    </script>
+</body>
+
+</html>
