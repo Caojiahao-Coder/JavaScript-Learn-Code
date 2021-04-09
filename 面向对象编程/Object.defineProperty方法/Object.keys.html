@@ -22,7 +22,33 @@
 
         arr.forEach(function (value) {
             console.log(value);
-        })
+        });
+
+        //可以修改一些属性值
+        Object.defineProperty(userData, 'gender', {
+            value: "Female"
+        });
+
+        //如果没有这个数据 就会添加这条数据
+        Object.defineProperty(userData, 'address', {
+            value: "江苏省 昆山市",
+            //enumerable 如果值为 false 他是不允许被遍历出来的。
+            enumerable: false,
+            //如果configurable 为false 
+            configurable: false
+        });
+        delete userData.address;
+        console.log('-----');
+        console.log(Object.keys(userData));
+
+        Object.defineProperty(userData, 'name', {
+            //不允许修改这个属性值
+            writable: false
+        });
+
+        userData.name = "after";
+
+        console.log(userData);
     </script>
 </body>
 

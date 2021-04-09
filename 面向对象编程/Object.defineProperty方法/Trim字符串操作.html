@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text"> <button>点击</button>
+    <div></div>
+    <script>
+        // var str = '     an   dy    ';
+        // console.log(str);
+        // var newStr= str.trim();
+        // console.log(newStr);
+
+        var input = document.querySelector('input');
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+
+        btn.onclick = function () {
+            //可以通过这个去过滤掉一些使用空格来伪造的方式
+            if (input.value.toString().trim() === '') {
+                alert('请输入内容！');
+            }
+            else{
+                console.log(input.value);
+                div.innerHTML = input.value;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

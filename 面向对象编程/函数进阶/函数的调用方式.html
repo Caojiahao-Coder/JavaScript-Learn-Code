@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn() {
+            console.log('人生的巅峰');
+        }
+
+        fn();
+        console.log("------------");
+        fn.call();
+
+        //构造函数
+        function Star() { console.log("这个是一个构造函数"); };
+        //构造函数只需要使用new 关键字
+        new Star();
+
+        //立即执行函数
+        (function(){
+            console.log('这个是一个立即执行函数');
+        })();
+
+        //对象的方法
+     var o = {
+         sayHi:function()
+         {
+             console.log('对象方法的this：'+this);
+         }
+     }
+
+     o.sayHi();
+    </script>
+</body>
+
+</html>
